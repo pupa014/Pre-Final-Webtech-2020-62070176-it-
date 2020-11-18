@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="bootstrap.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+<body>
+  <div class="all">
+    
+    <div class="card">
+      
+        <img src="https://i.scdn.co/image/ab67616d0000b27363c1c52648d4bda3281288e5"  height="640" weight="640">
+        <h1>Vanilla </h1>
+        <h3>Artist:LYRA</h3>
+        <hr>
+        <h3>Release date:2020-11-12</h3>
+        <h3>Avaliable:92 countries</h3>
+    </div>
+    <div class="card">
+      
+      <img src="https://i.scdn.co/image/ab67616d0000b2733d8453b30b271e699792d3ee" height="640" weight="640">
+      <h1>Seven Scenes from the Same Summer </h1>
+      <h3>Artist:Emily Burns</h3>
+      <hr>
+      <h3>Release date:2018-07-25</h3>
+      <h3>Avaliable:92 countries</h3>
+  </div>
+  <div class="card">
+      
+    <img src="https://i.scdn.co/image/ab67616d0000485199c51ac94fca3e64b6b50315" height="640" weight="640">
+    <h1>VANILLA VILLA </h1>
+    <h3>Artist:Sunset Rollercoaster</h3>
+    <hr>
+    <h3>Release date:2019-05-01</h3>
+    <h3>Avaliable:23 countries</h3>
+</div>
+    
+ <script>
+   let requestURL = 'ezquiz.json'; 
+   let request = new XMLHttpRequest(); 
+        document.write( '"single"'+data[i].images+'" style="width:8%" >'+'<br>');
+        request.onreadystatechange = function () { 
+            if (request.readyState == 4 && request.status == 200) {             
+                dataReportStatus(JSON.parse(request.responseText));            
+            } }; 
+
+        request.open("GET", requestURL, true); 
+        request.send(); 
+        function dataReportStatus(data) {   
+              document.write( '<img src= "'+data[i].images+'" style="heigh 640" >'+'<br>');
+                document.write('Name : '+'<b>'+data[i].id+'</b>'+'<br>');
+                document.write('Artist : '+data[i].artists+'<br>');
+                document.write('Population : '+data[i].population+'<br>');
+                document.write('Region : '+data[i].region+'<br>');
+                document.write('Location : '+data[i].latlng+'<br>');
+                document.write('Borders : '+data[i].borders+'<br>'+'<br>'+'<br>');
+            }
+        
+ </script>
+</body>
+</html>
